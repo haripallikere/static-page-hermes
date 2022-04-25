@@ -1,8 +1,84 @@
-*{
-    margin: 0;
-    padding: 0;
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ///////////////////////////////////////////////************* */
 
 .main-m {
     position: relative;
@@ -16,8 +92,8 @@
 .main__content {
     padding: 1rem;
     position: absolute;
-    bottom: 2rem;
-    left: 5rem;
+    bottom: 5rem;
+    left: 10rem;
 }
 .main__content h1 {
     font-size: 5em;
@@ -40,15 +116,15 @@
     align-items: center;
 }
 .about-hermes__about {
-    padding: 4rem;
+    padding: 2rem;
+    width: 90%;
     height: 50%;
-    width: 80%;
     display: flex;
     align-items: center;
     gap: 20px;
 }
 .about-hermes__image {
-    width: 50%;
+    width: 60%;
     height: 100%;
     background-image: url(./assets/about-hermes.jpeg);
     background-size: cover;
@@ -56,8 +132,15 @@
 .about-hermes__details {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 50%;
+    gap: 10px;
+    width: 40%;
+}
+.about-hermes__details button {
+    width: 30%;
+    height: 3rem;
+    color: aliceblue;
+    background-color: orange;
+    border: none;
 }
 .about-hermes__features {
     height: 50%;
@@ -65,13 +148,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+.about-hermes__features h2{
+    color: antiquewhite;
+    font-size: 3rem;
+}
+.about-hermes__features p {
+    font-size: 1.2rem;
+    color: antiquewhite;
+}
 .about-hermes__features--image1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 15px;
     gap: 5px;
-    color: antiquewhite;
     background-image: url(./assets/about-hermes__01.jpeg);
     background-size: cover;
 }
@@ -81,15 +171,14 @@
     justify-content: flex-end;
     padding: 15px;
     gap: 5px;
-    color: antiquewhite;
     background-image: url(./assets//about-hermes__02.jpeg);
     background-size: cover;
 }
 .about-hermes__features--image3 {
     padding: 2rem;
-    color: antiquewhite;
     background-image: url(./assets//about-hermes_03.jpeg);
     background-size: cover;
+    filter: saturate(4);
 }
 
 /* section 3 */
@@ -109,6 +198,7 @@
 }
 .lead__heading p {
     font-size: 1.5rem;
+    color: gray;
 }
 .lead__content {
     height: 80vh;
@@ -118,9 +208,15 @@
     place-items: center;
 }
 .lead--content {
-    display: grid;
+    display: flex;
     gap: 20px;
-    position: relative;
+}
+.lead--content object {
+    width: 70px;
+    height: 70px;
+}
+.lead__content2 object {
+    transform: rotate(-30deg);
 }
 .lead--content h2 {
     font-size: 3.5rem;
@@ -128,31 +224,8 @@
 .lead--content p {
     font-size: 1.5rem;
 }
-.lead__content1 h2::before {
-    content: url(./assets/document.png);
-    position: absolute;
-    left: -50px;
-    top: -10px;
-}
-.lead__content2 h2::before {
-    content: url(./assets/send.png);
-    position: absolute;
-    left: -50px;
-    top: -10px;
-    transform: rotate(-30deg);
-}
-.lead__content3 h2::before {
-    content: url(./assets/group.png);
-    position: absolute;
-    left: -50px;
-    top: -10px;
-}
-.lead__content4 h2::before {
-    content: url(./assets/time.png);
-    position: absolute;
-    left: -50px;
-    top: -10px;
-}
+
+
 
 /* section 4 */
 .service {
@@ -165,22 +238,44 @@
     grid-template-columns: 1fr 1fr 1fr;
     height: 40%;
 }
+.services .bar {
+    margin-bottom: 2rem;
+    height: 5px;
+    width: 10%;
+    background-color: aliceblue;
+}
+.services h3 {
+   margin: 0 auto;
+}
 .services .services-1 {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     color: antiquewhite;
     background-image: url(./assets/401.jpeg);
+    background-size: cover;
 
 }
 .services .services-2{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     color: antiquewhite;
     background-image: url(./assets/402.jpeg);
-  
+    background-size: cover;
 }
 .services .services-3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
-    color: antiquewhite;
+    color: whitesmoke;
     background-image: url(./assets/403.jpeg);
+    background-size: cover;
+    filter: grayscale(50%);
 
 }
 .services__about {
@@ -188,18 +283,18 @@
     height: 50%;
     background-image: url(./assets/404.jpeg);
 }
-.services__about > div {
+.services__about .in {
     background-color: aliceblue;
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-content: center;
     justify-content: center;
     padding: 5rem;
     z-index: 200;
     height: 100%;
-    width: 40%;
+    width: 45%;
+    top:0;
     right: 20%;
 }
 span img {
@@ -233,15 +328,16 @@ span img {
     align-items: center;
     height: 30%;
     text-align: center;
-    gap: 3rem;
+    gap: 1rem;
 }
 .staff-contact button {
-    width: 10%;
-    height: 20%;
+    width: 15%;
+    height: 3rem;
     border: none;
     color: aliceblue;
-    background-color: rgb(246, 119, 119);
+    background-color: orange;
 }
+
 .staff-contact h1 {
     font-size: 2.5rem;
     font-weight: bolder;
@@ -261,7 +357,6 @@ span img {
 }
 .staff-members {
     width: 100%;
-    /* padding: 2rem; */
     margin: 0 auto;
     position: absolute;
     display: flex;
@@ -295,8 +390,7 @@ span img {
     gap: 15px
 }
 .footer-sub-img {
-    width: 55%;
-    /* max-height: 40%; */
+    width: 100%;
 }
 .footer-sub-img img {
     max-width: 100%;
@@ -304,11 +398,19 @@ span img {
     object-fit: cover;
 }
 .footer-sub-content {
-    width: 40%;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 2px;
+}
+.footer-sub-content button {
+     width: 30%;
+     height:2rem;
+     border: none;
+     color: aliceblue;
+     background-color: orange;
 }
 .footer-sub-content h1 {
     padding: 1rem;
@@ -337,11 +439,15 @@ span img {
     color: orange;
 }
 
-@media (max-width: 770px) {
+
+@media only screen and (max-device-width: 812px){
+    body {
+         padding: 2rem;
+    }
     .main-m {
+        padding: 4rem;  
         width: 100%;
-        height: 800px;
-        /* object-fit: fill; */
+        /* height: 800px; */
     }
     .main__content {
         position: absolute;
@@ -361,40 +467,197 @@ span img {
         max-width: 24ch;
     }
 
-/* section 2 */
 
-.about-hermes {
-    /* height: 1000px; */
-    max-width: 100%;
+    .about-hermes {
+        max-width: 100%;
+    }
+
+    .about-hermes__about {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-hermes__image {
+        width: 100%;
+    }
+
+    .about-hermes__details {
+        place-items: center;
+        width: 100%; 
+    }
+
+    .about-hermes__features {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    /* section 3 */
+    .lead__content {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    /* section 4 */
+    .service {
+        height: 2200px;
+    }
+    .services {
+        height: 1200px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: 1fr 1fr 1fr;
+    }
+    .services__about {
+        height: 400px;
+        padding: 0;
+        background-image: none;
+    }
+    .services__about .in {
+        box-sizing: border-box;
+        margin-top: 3rem;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        right: 0;
+    }
+    .service-logos {
+        margin-top: 5rem;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        height: 500px;
+    }
+    .service-logos>img {
+        max-height: auto;
+        max-width: 15%;
+    }
+
+    /* section 5 */
+    .staff-contact {
+        height: 20%;
+    }
+    .staff-contact button {
+        width: 50%;
+    }
+    .staff-directory--content {
+        padding: 2rem;
+        gap: 30px;
+    }
+    .staff-directory {
+        position: unset;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .staff-members {
+        display: grid;
+        place-content: center;
+        gap: 40px;
+        position: unset; 
+    }
+
+    /* footer  */
+    .footer-sub {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        gap: 15px
+    }
+    .footer-sub-img {
+        width: 100%;
+    }
+    .footer-sub-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .footer-sub-content h1 {
+        padding: 0;
+    }
+    .footer-contact-location {
+        grid-template-columns: 1fr;
+    }
 }
 
-.about-hermes__about {
-    /* height: 100%; */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+
+
+
+@media only screen and (min-width: 812px) and (max-width: 1194px) {
+    .main-m {
+        height: 80vh;
+    }
+    .about-hermes {
+        height: 50vh;
+    }
+    .about-hermes__about {
+        width: 100%;
+    }
+
+    /* section 4 */
+    .services h3 {
+        font-size: 2rem;
+    }
+    .services__about {
+        position: relative;
+        height: 50%;
+        background-image: url(./assets/404.jpeg);
+        background-size: cover;
+    }
+    .services__about .in {
+        right: 0%;
+    }
+    .service-logos {
+        padding: 3rem;
+        max-height: 30%;
+        background-color: aliceblue;
+    }
+    
+    .service-logos>img {
+        max-height: auto;
+        max-width: 10%;
+    }
+
+    /* section 5 */
+    .staff {
+        height: 50vh;
+    }
+    .staff-contact {
+        height: 30%;
+    }
+    .staff-directory {
+        height: 70%;
+    }
+    .staff-member {
+        width: 110px;
+        height: 110px;
+    }
+    /* section footer  */
+    .footer {
+        height: 50vh;
+    }
+    .footer-sub {
+        padding: 4rem;
+        margin: auto;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        gap: 15px
+    }
+    .footer-sub-img img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
 }
-
-.about-hermes__image {
-    width: 100%;
-}
-
-.about-hermes__details {
-    display: flex;
-    flex-direction: column;
-    width: 100%; 
-}
-
-.about-hermes__features {
-    /* height: 100%; */
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-}
-
-}
-
-
-
-
