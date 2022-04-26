@@ -236,7 +236,7 @@ select {
 .services {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 40%;
+    height: 50%;
 }
 .services .bar {
     margin-bottom: 2rem;
@@ -282,6 +282,7 @@ select {
     position: relative;
     height: 50%;
     background-image: url(./assets/404.jpeg);
+    background-size: cover;
 }
 .services__about .in {
     background-color: aliceblue;
@@ -322,7 +323,7 @@ span img {
 }
 
 .staff-contact {
-    padding: 2rem;
+    padding: 7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -361,7 +362,7 @@ span img {
     position: absolute;
     display: flex;
     justify-content: space-around;
-    bottom: 25%;
+    bottom: 15%;
 }
 .staff-member {
     /* position: absolute; */
@@ -385,7 +386,7 @@ span img {
     padding: 4rem;
     margin: auto;
     height: 50%;
-    width: 80%;
+    /* width: 80%; */
     display: flex;
     gap: 15px
 }
@@ -394,7 +395,7 @@ span img {
 }
 .footer-sub-img img {
     max-width: 100%;
-    max-height: 100%;
+    height: 100%;
     object-fit: cover;
 }
 .footer-sub-content {
@@ -440,14 +441,14 @@ span img {
 }
 
 
-@media only screen and (max-device-width: 812px){
+@media only screen and (max-width: 812px){
     body {
          padding: 2rem;
     }
     .main-m {
         padding: 4rem;  
         width: 100%;
-        /* height: 800px; */
+        height: 800px;
     }
     .main__content {
         position: absolute;
@@ -470,6 +471,7 @@ span img {
 
     .about-hermes {
         max-width: 100%;
+        height: 2000px;
     }
 
     .about-hermes__about {
@@ -479,7 +481,7 @@ span img {
     }
 
     .about-hermes__image {
-        width: 100%;
+        max-width: 100%;
     }
 
     .about-hermes__details {
@@ -503,34 +505,33 @@ span img {
 
     /* section 4 */
     .service {
-        height: 2200px;
+        height: 1600px;
     }
     .services {
-        height: 1200px;
         display: grid;
         grid-template-columns: 1fr;
-        grid-row: 1fr 1fr 1fr;
     }
     .services__about {
-        height: 400px;
-        padding: 0;
+        padding: 2rem;
         background-image: none;
+        height: unset;
     }
     .services__about .in {
-        box-sizing: border-box;
-        margin-top: 3rem;
-        background-color: white;
-        height: 100%;
+        background-color: none;
+        position: unset;
+        display: unset;
+        padding: 0;
+        height: unset;
         width: 100%;
-        right: 0;
+        top:0;
     }
     .service-logos {
-        margin-top: 5rem;
+        margin-top: 1rem;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
-        height: 500px;
+        /* height: 500px; */
     }
     .service-logos>img {
         max-height: auto;
@@ -538,37 +539,47 @@ span img {
     }
 
     /* section 5 */
+    .staff {
+        height: 50%;
+    }
     .staff-contact {
-        height: 20%;
+        height: 30%;
     }
     .staff-contact button {
         width: 50%;
     }
     .staff-directory--content {
-        padding: 2rem;
-        gap: 30px;
+        padding: 1rem;
     }
     .staff-directory {
         position: unset;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
+        height: 60%;
+        padding: 2rem;
     }
     .staff-members {
         display: grid;
         place-content: center;
-        gap: 40px;
+        gap: 10px;
         position: unset; 
+    }
+    .staff-member {
+        width: 120px;
+        height: 120px;
     }
 
     /* footer  */
+    .footer {
+        margin-top: 4rem;
+    }
     .footer-sub {
         padding: 0;
         display: flex;
         flex-direction: column;
-        height: 50%;
+        height: 40%;
         width: 100%;
-        gap: 15px
     }
     .footer-sub-img {
         width: 100%;
@@ -578,7 +589,6 @@ span img {
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         gap: 10px;
     }
@@ -593,9 +603,9 @@ span img {
 
 
 
-@media only screen and (min-width: 812px) and (max-width: 1194px) {
+/* @media screen and (max-width: 1200px) {
     .main-m {
-        height: 80vh;
+        height: 80v
     }
     .about-hermes {
         height: 50vh;
@@ -604,7 +614,7 @@ span img {
         width: 100%;
     }
 
-    /* section 4 */
+
     .services h3 {
         font-size: 2rem;
     }
@@ -628,36 +638,39 @@ span img {
         max-width: 10%;
     }
 
-    /* section 5 */
+ 
     .staff {
-        height: 50vh;
+        height: 60vh;
     }
     .staff-contact {
-        height: 30%;
+        height: 50%;
     }
     .staff-directory {
-        height: 70%;
+        height: 50%;
     }
     .staff-member {
         width: 110px;
         height: 110px;
     }
-    /* section footer  */
+
     .footer {
-        height: 50vh;
+        height: 60vh;
+        margin-top: 4rem;
     }
     .footer-sub {
-        padding: 4rem;
-        margin: auto;
-        height: 50%;
         width: 100%;
         display: flex;
-        gap: 15px
+        height: 80%;
+
+    }
+    .footer-sub-img {
+        height: 100%;
+        width: 100%;
     }
     .footer-sub-img img {
         max-width: 100%;
         height: 100%;
-        object-fit: cover;
     }
 
-}
+
+} */
