@@ -641,7 +641,9 @@ span img {
         height: 5rem;
     }
     .staff-contact {
+        padding: 0;
         height: 50%;
+        align-items: unset;
     }
     .staff-directory {
         height: 50%;
