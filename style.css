@@ -630,7 +630,10 @@ span img {
         max-width: 8%;
     }
     .staff {
-        height: 80vh;
+        height: 50vh;
+    }
+    .staff-contact button {
+        width: 30%;
     }
     .staff-contact {
         height: 50%;
