@@ -606,6 +606,10 @@ span img {
     .main-m {
         height: 50vh;
     }
+    .about-hermes__details button {
+        width: 40%;
+        height: 3.5rem;
+    }
   
     .lead {
         height: 50%;
@@ -634,6 +638,7 @@ span img {
     }
     .staff-contact button {
         width: 30%;
+        height: 5rem;
     }
     .staff-contact {
         height: 50%;
@@ -666,6 +671,9 @@ span img {
         max-width: 100%;
         height: 100%;
     }
-
+    .footer-sub-content button {
+        width: 50%;
+        height: 2.5rem;
+    }
 
 } 
