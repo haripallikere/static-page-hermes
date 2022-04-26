@@ -632,11 +632,13 @@ span img {
     .staff {
         height: 80vh;
     }
+    .staff-contact {
+        height: 50%;
+    }
+    .staff-directory {
+        height: 50%;
+    }
     .staff-members {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
         bottom: 1%;
     }
     .staff-member {
