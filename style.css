@@ -624,7 +624,7 @@ span img {
         max-width: 8%;
     }
     .staff {
-        height: 50vh;
+        height: unset;
     }
     .staff-contact button {
         width: 30%;
@@ -632,10 +632,10 @@ span img {
     }
     .staff-contact {
         padding: 0;
-        height: 50%;
+        height: 30%;
     }
     .staff-directory {
-        height: 50%;
+        height: 60%;
     }
     .staff-members {
         bottom: 1%;
