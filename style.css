@@ -630,14 +630,14 @@ span img {
         max-width: 8%;
     }
     .staff {
-        height: 50vh;
+        height: 80vh;
     }
     .staff-members {
         width: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
-        bottom: 20%;
+        bottom: 1%;
     }
     .staff-member {
         width: 100px;
