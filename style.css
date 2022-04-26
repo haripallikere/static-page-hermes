@@ -435,7 +435,7 @@ span img {
 }
 
 
-@media only screen and (max-width: 812px){
+@media only screen and (max-width: 600px){
     body {
          padding: 2rem;
     }
@@ -505,7 +505,7 @@ span img {
 
     /* section 4 */
     .service {
-        /* height: 1600px; */
+        height: 150vh;
     }
     .services {
         display: grid;
@@ -529,18 +529,19 @@ span img {
         justify-content: space-between;
         align-items: center;
         gap: 20px;
+        height: 30%;
     }
     .service-logos>img {
         max-height: auto;
-        max-width: 15%;
+        max-width: 10%;
     }
 
     /* section 5 */
     .staff {
-        height: 50%;
+        height: 50%;   
     }
     .staff-contact {
-        height: 30%;
+        height: 40%;
     }
     .staff-contact button {
         width: 50%;
@@ -576,7 +577,7 @@ span img {
         padding: 0;
         display: flex;
         flex-direction: column;
-        height: 40%;
+        /* height: 40%; */
         width: 100%;
     }
     .footer-sub-img {
@@ -601,7 +602,7 @@ span img {
 
 
 
- @media screen and (min-width: 812px) and (max-width: 1024px) {
+ @media screen and (min-width: 724px) and (max-width: 1024px) {
     .main-m {
         height: 50vh;
     }
