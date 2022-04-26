@@ -591,7 +591,7 @@ span img {
 
 
 
- @media screen and (min-width: 724px) and (max-width: 1024px) {
+ @media screen and (min-width: 601px) and (max-width: 1024px) {
     .main-m {
         height: 50vh;
     }
@@ -604,6 +604,9 @@ span img {
     .lead__content {
         margin-top: 20px;
         gap: 5px;
+    }
+    .service {
+        height: 120vh;
     }
     .services h3 {
         font-size: 2rem;
