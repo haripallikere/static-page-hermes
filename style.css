@@ -409,6 +409,7 @@ span img {
     font-size: 3rem;
 }
 .footer-contact {
+    background-color: rgb(179, 177, 177);
     text-align: center;
 }
 .footer-contact--details {
@@ -416,6 +417,7 @@ span img {
     gap: 5px;
 }
 .footer-contact-location {
+  
     padding: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
